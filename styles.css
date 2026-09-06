@@ -1,0 +1,334 @@
+:root {
+    --jet: #333333;
+    --cambridge-blue: #7eb09b;
+    --celadon: #a8d5ba;
+    --columbia-blue: #bfd7ea;
+    --thistle: #d6cdea;
+}
+
+html {
+    scroll-padding-top: 100px;
+}
+
+h1 {
+    font-size: 250%;
+}
+
+p {
+    font-size: 150%
+}
+
+li {
+    font-size: 150%;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    color: var(--jet);
+    text-align: center;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    background-color: white;
+    border: 3px solid var(--jet);
+    padding: 0.25%; 
+    border-radius: 0 0 10px 10px;
+    list-style: none;
+}
+
+nav li {
+    margin: 0.5rem 0;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--jet);
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background-color: var(--cambridge-blue);
+}
+
+header {
+    position: relative;
+    padding: 2rem 0;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: medium;
+}
+
+header::before { /* To make background image more transparent */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('images/santorini_landscape.jpg') center/cover no-repeat;
+    opacity: 0.3;
+    z-index: 0;
+}
+
+header h1, header p { /* Keep text fully opaque */
+    position: relative;
+}
+
+section {
+    margin: 2rem;
+    padding: 1.5rem 0;
+    background-color: var(--thistle);
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+
+.about-text {
+    flex: 1;
+    max-width: 60%;
+    margin: 0 0 0 10%;
+}
+
+.about-image {
+    width: 250px;
+    height: auto;
+    border-radius: 15px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    margin: 0 10% 0 0;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.grid-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    background: white;
+    padding: 10px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+}
+
+.grid-item img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.grid-item h3 {
+    color: var(--jet);
+    text-align: center;
+}
+
+.grid-item:hover {
+    transform: scale(1.05);
+}
+
+.dropdown {
+    position: relative;
+    z-index: 11;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    min-width: 150px;
+    text-align: center;
+    z-index: 10;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: var(--jet);
+    transition: background 0.2s ease-in-out;
+}
+
+.dropdown-menu a:hover {
+    background: var(--columbia-blue);
+    border-radius: 5px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #666666;
+    color: white;
+    padding: 0px 10px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000;
+    animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut { /* https://www.tutorialspoint.com/css/css_animation_fade_out.htm */
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    100% { opacity: 0; display: none; }
+}
+
+.cuisine-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 5%;
+    padding: 2% 8%;
+}
+
+.menu {
+    padding: 0;
+    width: 50%;
+    max-height: 400px;
+    overflow-y: auto;
+    border-radius: 10px;
+    border: 5px solid #a18ccf;
+    background-color: white;
+}
+
+.menu li {
+    background: var(--celadon);
+    padding: 15px;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.menu li:hover {
+    background: var(--cambridge-blue);
+}
+
+.menu .filler {
+    background: var(--thistle); /* Use a different color for filler */
+    font-style: italic;
+}
+
+.dish-display {
+    width: 50%;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+#dish-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background: white;
+    border: 3px solid #eee;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transform: rotate(-2deg);
+    min-height: 100px;
+}
+
+#dish-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.dish-info {
+    margin-top: 10px;
+    font-style: italic;
+    color: #555;
+    background: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.drama-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 2% 8%;
+}
+
+.drama-category {
+    background: white;
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 0% 10%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.drama-category h3 {
+    margin-top: 0.5rem;
+    font-size: 150%;
+}
+
+.drama-category ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.drama-category li {
+    font-size: 100%;
+    background-color: var(--celadon);
+    margin: 8px 0;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+/* Slightly different pastel accents for each category */
+.korean h3 {
+    color: var(--cambridge-blue);
+}
+
+.chinese h3 {
+    color: #a18ccf;
+}
+
+.japanese h3 {
+    color: #7fa9c9;
+}

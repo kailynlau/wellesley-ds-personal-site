@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Kailyn</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;700&display=swap">
+</head>
+
+<body>
+  <header>
+    <h1>Hi, I'm Kailyn.</h1>
+    <p>Welcome to a peek into my life!</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#passions">Passions</a></li>
+      <li><a href="#cuisine">Cantonese Cuisine</a></li>
+      <li><a href="#kdramas">K-Dramas</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <div class="about-content">
+      <div class="about-text">
+        <h1>About Me</h1>
+        <ul>
+          <li>Kailyn</li>
+          <li>Wellesley '28</li>
+          <li>Southern California</li>
+        </ul>
+      </div>
+      <img src="images/personal_photo.JPG" alt="About Me" class="about-image">
+    </div>
+  </section>
+
+
+  <section id="passions">
+    <h2>My Passions</h2>
+    <div class="grid-container" onclick="showComingSoon(event)">
+      <a href="" class="grid-item">
+        <img src="images/tkd.png" alt="Tae Kwon Do">
+        <h3>Martial Arts</h3>
+      </a>
+      <a href="" class="grid-item" onclick="showComingSoon(event)">
+        <img src="images/rubiks-cube.jpg" alt="Rubik's Cube">
+        <h3>Cubing</h3>
+      </a>
+      <div class="grid-item dropdown">
+        <img src="images/concert.jpg" alt="Concert Picture">
+        <h3 class="dropdown-toggle">Music ▾</h3>
+        <div class="dropdown-menu">
+          <a href="">Piano</a onclick="showComingSoon(event)">
+          <a href="">Harp</a onclick="showComingSoon(event)">
+          <a href="">Aiko</a onclick="showComingSoon(event)">
+          <a href="">K-pop</a onclick="showComingSoon(event)">
+        </div>
+      </div>
+      <a href="" class="grid-item" onclick="showComingSoon(event)">
+        <img src="images/crochet.jpg" alt="Crocheting">
+        <h3>Yarnwork</h3>
+      </a>
+    </div>
+  </section>
+
+  <div id="coming-soon-popup" class="popup"> <!-- hidden pop-up button -->
+    <p>Coming Soon!</p>
+  </div>
+
+
+  <section id="cuisine">
+    <h2>Cantonese Cuisine</h2>
+    <div class="cuisine-container">
+      <ul class="menu" onmouseleave="showDish('defaultDish')">
+        <li onmouseover="showDish('xiao-long-bao')" onclick="showDish('xiao-long-bao')">Xiao Long Bao</li>
+        <li onmouseover="showDish('jook')" onclick="showDish('jook')">Congee/Jook</li>
+        <li onmouseover="showDish('phoenix-talons')" onclick="showDish('phoenix-talons')">Phoenix Talons/Feng Zhao</li>
+        <li onmouseover="showDish('hoisin-duck')" onclick="showDish('hoisin-duck')">Duck with Hoisin</li>
+        <li class="filler" onmouseover="showDish('fillerText')" onclick="showDish('fillerText')">Check back later for more recs!</li>
+        <li class="filler" onmouseover="showDish('fillerText')" onclick="showDish('fillerText')">Check back later for more recs!</li>
+        <li class="filler" onmouseover="showDish('fillerText')" onclick="showDish('fillerText')">Check back later for more recs!</li>
+        <li class="filler" onmouseover="showDish('fillerText')" onclick="showDish('fillerText')">Check back later for more recs!</li>
+      </ul>
+
+      <div class="dish-display">
+        <div id="dish-content">
+          <img src="images/default.jpg" alt="" id="dish-image">
+          <div class="dish-info">
+            <p id="dish-text">Hover over a dish to see details!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="kdramas">
+    <h2>K-Dramas</h2>
+    <p>I love K-Dramas! I've watched a decent amount, as well as dramas from other countries.</p>
+    <p>Here are a few of my favourites:</p>
+    
+    <div class="drama-container">
+      <div class="drama-category korean">
+        <h3>Korean</h3>
+        <ul>
+          <li>My Name</li>
+          <li>Extraordinary Attorney Woo</li>
+          <li>Tale of the Nine-Tailed</li> <li>Do You Like Brahms?</li>
+          <li>A Shop for Killers</li> <li>Midnight Photo Studio</li>
+        </ul>
+      </div>
+      <div class="drama-category chinese">
+        <h3>Chinese</h3>
+        <ul>
+          <li>A Journey to Love</li>
+          <li>The Untamed</li>
+          <li>Word of Honor</li>
+          <li>Fangs of Fortune</li>
+        </ul>
+      </div>
+      <div class="drama-category japanese">
+        <h3>Japanese</h3>
+        <ul>
+          <li>Alice in Borderland</li>
+          <li>Fermat no Ryori</li>
+        </ul>
+      </div>
+    </div>
+  </section> 
+
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Let's connect! You can reach me at <a href="mailto:kl126@wellesley.edu">kl126@wellesley.edu</a>.</p>
+  </section>
+  
+  <script src="script.js"></script>
+</body>
+</html>
