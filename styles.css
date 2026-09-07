@@ -332,3 +332,83 @@ section {
 .japanese h3 {
     color: #7fa9c9;
 }
+
+.favorites-heading {
+    margin-top: 2rem;
+}
+
+.drama-highlight {
+    margin: 2rem auto;
+    max-width: 800px;
+    padding: 1.5rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.drama-highlight h3 {
+    color: var(--cambridge-blue);
+    font-size: 150%;
+}
+
+.drama-highlight button {
+    font-family: 'Nunito', sans-serif;
+    font-size: 110%;
+    font-weight: bold;
+    color: var(--jet);
+    background-color: var(--celadon);
+    border: 2px solid var(--jet);
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.drama-highlight button:hover {
+    background-color: var(--cambridge-blue);
+    transform: scale(1.05);
+}
+
+#drama-pick {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.drama-category li {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.drama-category li small {
+    font-size: 85%;
+    font-weight: normal;
+    font-style: italic;
+    opacity: 0.75;
+}
+
+.drama-category li:hover {
+    background-color: var(--cambridge-blue);
+    transform: translateX(5px);
+}
+
+.drama-note {
+    margin: 1rem auto;
+    padding: 0.5rem 2rem;
+    max-width: 800px;
+    font-size: 90%;
+}
+
+#contact a {
+    color: var(--jet);
+    font-weight: bold;
+    text-decoration: none;
+    background-color: var(--celadon);
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background-color 0.2s;
+}
+
+#contact a:hover {
+    background-color: var(--cambridge-blue);
+}
